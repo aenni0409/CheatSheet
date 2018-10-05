@@ -1,53 +1,75 @@
 # here are the useful git commands for the beginning.
 # I created this file to take a note from what I had in the real world.
 # starts from the terminal command
+# note:
+# <remote_name> usually is 'origin'
 
 1. when I do not need any branch... (master)
 
 # get the repo. to the local
-cd <path where you wanna put the local repo.>
-git clone <repo. website address>
+$cd <path where you wanna put the local repo.>
+$git clone <repo. website address>
 # update the file
 ######## git add ##########
 ## update all the files
-git add .     
+$git add .     
 ## update the selected files
-git add <file path1> <file path2> <file path3> ....
+$git add <file path1> <file path2> <file path3> ....
 ###########################
 ######## git commit #########
 ## when you have a few words to say
-git commit -m '<start what you wanna say>'
+$git commit -m '<start what you wanna say>'
 ## when you have a lot to take a note in command
-git commit -a
-a
-<start what you wanna add in the command>
-:q
+$git commit -a
+	a
+	<start what you wanna add in the command>
+	:q
 ##############################
-git push
+$git push
 
 2. when I need a branch...
 
 # create the branch
-git checkout <branch_name>
-git status
+$git checkout <branch_name>
+$git status
 # when the status shows that you are in the <branch_name>, all the update will go to <branch_name>
-####### git merge ###########
-# merge "some" files in the branch from <branch_name> to the master...
-git checkout master
-git status
-git checkout <branch_name> <file_path1> <file_path2> .... 
-git commit -m '<commit note>'
-git push
-#merge "whole" branch from <branch_name> to the master...
-git checkout <branch_name>
-git pull origin master
-git checkout master
-git merge <branch_name>
-############################
+
+# merge the brach to the master
+## merge "some" files in the branch from <branch_name> to the master...
+$git checkout master
+$git status
+$git checkout <branch_name> <file_path1> <file_path2> .... 
+$git commit -m '<commit note>'
+$git push
+## merge "whole" branch from <branch_name> to the master...
+$git checkout <branch_name>
+$git pull <remote_name> master
+$git checkout master
+$git merge <branch_name>
+
+#If I dont need the branch anymore...
+##delete the local branch
+###delete the branch if branch has fully merged.
+$ git branch -d branch_name
+###delete the branch even w/o merge
+$ git branch -D branch_name
+## delete the remote branch
+git push <remote_name> --d <branch_name>
 
 3. before having any change of files...
 
-#make sure your local repo. are aligned with the cloud
+#make sure your local repo. are aligned with the remote
 git status
+
+######make files aligned#######
+#maybe you wanna the version rom remote repo. 
+git pull
+#or you wanna update the local to the remote repo.
+git add .
+git commit -m <commands>
+git push
+###############################
+
+
 
 
