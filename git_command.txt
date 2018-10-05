@@ -5,17 +5,15 @@
 1. when I do not need any branch... (master)
 
 # get the repo. to the local
-cd <path you wanna put the local repo.>
+cd <path where you wanna put the local repo.>
 git clone <repo. website address>
-
 # update the file
 ######## git add ##########
-## when you want to update all the files
+## update all the files
 git add .     
-## when you want to update that selected files
+## update the selected files
 git add <file path1> <file path2> <file path3> ....
 ###########################
-
 ######## git commit #########
 ## when you have a few words to say
 git commit -m '<start what you wanna say>'
@@ -24,9 +22,7 @@ git commit -a
 a
 <start what you wanna add in the command>
 :q
-## git push (push the files)
 ##############################
-
 git push
 
 2. when I need a branch...
@@ -34,22 +30,20 @@ git push
 # create the branch
 git checkout <branch_name>
 git status
-# when the status shoes that you are in the <branch_name>, all the update will go to <branch_name
-
+# when the status shows that you are in the <branch_name>, all the update will go to <branch_name>
+####### git merge ###########
 # merge "some" files in the branch from <branch_name> to the master...
 git checkout master
 git status
 git checkout <branch_name> <file_path1> <file_path2> .... 
 git commit -m '<commit note>'
 git push
-
 #merge "whole" branch from <branch_name> to the master...
 git checkout <branch_name>
 git pull origin master
 git checkout master
 git merge <branch_name>
-
-
+############################
 
 3. before having any change of files...
 
