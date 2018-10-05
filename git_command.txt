@@ -54,20 +54,20 @@ $ git branch -d branch_name
 ###delete the branch even w/o merge
 $ git branch -D branch_name
 ## delete the remote branch
-git push <remote_name> --d <branch_name>
+$git push <remote_name> --d <branch_name>
 
 3. before having any change of files...
 
 #make sure your local repo. are aligned with the remote
-git status
+$git status
 
 ######make files aligned#######
 #maybe you wanna the version rom remote repo. 
-git pull
+$git pull
 #or you wanna update the local to the remote repo.
-git add .
-git commit -m <commands>
-git push
+$git add .
+$git commit -m <commands>
+$git push
 ###############################
 
 
