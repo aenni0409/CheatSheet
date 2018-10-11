@@ -70,6 +70,13 @@ $git commit -m <commands>
 $git push
 ###############################
 
+4. gitignore file
+
+#The .gitignore file that does not work.
+#need to untrack all the files exisitng that is in the gitignroe and also in the repo.
+$git rm -r --cached .
+$git add .
+$git commit -m ".gitignore is now working"
 
 
 
